@@ -21,3 +21,9 @@ docker compose up
 Используется два токена
 1. Admin : 15007518-e419-4fab-a59a-dcb22dfef9bd
 2. User : 2c8b3ee7-b02a-4d2e-8e8d-d8d044789407
+
+## Стэк
+1. Java 21
+2. Spring Boot 3.2
+3. PostgreSQL
+4. Redis
