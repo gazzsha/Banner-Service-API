@@ -6,7 +6,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@EnableCaching
+//@EnableCaching
 @EnableTransactionManagement
 public class BannerServiceApplication {
 
