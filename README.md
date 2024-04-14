@@ -16,9 +16,6 @@ docker compose up
 
 3. Документация доступна по адресу [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html).
 
-## Postman
-
-
 ## Пояснение авторизации
 
 Используется два токена
