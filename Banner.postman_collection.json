@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "c7f0810c-6ccb-42ca-bba9-9be3eaaeff8f",
+		"name": "Banner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32258220"
+	},
+	"item": [
+		{
+			"name": "Create Banner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "15007518-e419-4fab-a59a-dcb22dfef9bd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tag_ids\": [\r\n        1,\r\n        2,\r\n        3\r\n    ],\r\n    \"feature_id\": 1,\r\n    \"content\": {\r\n        \"title\": \"some_title\",\r\n        \"text\": \"some_text\",\r\n        \"url\": \"some_url\",\r\n        \"mama\": \"mama\"\r\n    },\r\n    \"is_active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/banner",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Banner",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "15007518-e419-4fab-a59a-dcb22dfef9bd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tag_ids\" : [0,1]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/banner/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banner",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Banner",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "15007518-e419-4fab-a59a-dcb22dfef9bd",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/banner",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Banner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "15007518-e419-4fab-a59a-dcb22dfef9bd",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/user_banner",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user_banner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Banner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "15007518-e419-4fab-a59a-dcb22dfef9bd",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/banner?feature_id=2&tag_id=2&limit=100&offset=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banner"
+					],
+					"query": [
+						{
+							"key": "feature_id",
+							"value": "2"
+						},
+						{
+							"key": "tag_id",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

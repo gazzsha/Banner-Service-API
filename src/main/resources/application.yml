@@ -1,0 +1,48 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  cache:
+    type: redis
+    cache-names: redis-cache
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: 123
+      ssl:
+        enabled: true
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:5432/${POSTGRES_DATABASE}?currentSchema=${POSTGRES_SCHEMA}
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/main-changelog.xml
+  jpa:
+    hibernate:
+      ddl-auto: validate
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: debug
+        data:
+          transaction: debug
+        orm:
+          jpa: debug
+      hibernate.sql: debug
+      cache=DEBUG:
+
+
+#db:
+#  redis:
+#    host: localhost
+#    port: 6379
+#    password: 123
+
+security:
+  token:
+    admin: 15007518-e419-4fab-a59a-dcb22dfef9bd
+    user: 2c8b3ee7-b02a-4d2e-8e8d-d8d044789407
